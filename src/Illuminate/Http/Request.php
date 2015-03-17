@@ -550,6 +550,9 @@ class Request extends SymfonyRequest implements ArrayAccess {
 	public function replace(array $input)
 	{
 		$this->getInputSource()->replace($input);
+
+		$this->all = null;
+		$this->input = null;
 	}
 
 	/**
